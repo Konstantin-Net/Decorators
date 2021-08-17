@@ -10,7 +10,8 @@ def log_file_path(way):     # Функция принимает путь куд�
                 f.write(f"Имя функции: {old_function.__name__}\n")
                 f.write(f"Аргументы функции: {args}\n")
                 f.write(f"Возвращаемое значение: {something}\n\n")
-            return print(f"Лог функции {old_function.__name__} записан")
+            print(f"Лог функции {old_function.__name__} записан")
+            return something
         return new_function
     return logger
 
@@ -37,3 +38,8 @@ res1 = func_1(4, 3)
 res2 = func_2(45, 14)
 res3 = func_3(12, 13)
 
+a = func_1(1, 4)
+b = func_1(3, 7)
+c = func_1(a, b)
+
+print(c)
